@@ -239,7 +239,7 @@ i {
     background-color: var(--Desaturated-Dark-Blue);
   }
 
-  .fa-share-2.active {
+  #fa-share-2.active {
     color: white;
   }
 
