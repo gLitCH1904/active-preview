@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -191,12 +191,17 @@ i {
   .container {
     flex-direction: column;
     max-width: 375px;
-    height: initial;
+    height: fit-content;
+  }
+
+  .pic {
+    height: fit-content;
+    margin-bottom: -5px;
   }
 
   .pic img {
     border-radius: 10px 10px 0 0;
-    height: initial;
+    height: fit-content;
   }
 
   .words {
