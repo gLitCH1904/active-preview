@@ -40,6 +40,10 @@ body {
 
 /* styling the picture section */
 
+.pic {
+  width: 287.88px;
+}
+
 .pic img {
   width: 100%;
   height: 100%;
@@ -197,6 +201,7 @@ i {
   .pic {
     height: fit-content;
     margin-bottom: -5px;
+    width: initial;
   }
 
   .pic img {
