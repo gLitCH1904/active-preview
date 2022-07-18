@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--Light-Grayish-Blue);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  font-family: "Manrope";
+  padding: 20px;
+}
+
+/* styling the container */
+.container {
+  display: flex;
+  height: 270px;
+  width: 740px;
+}
+
+/* styling the picture section */
+
+.pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+/* styling the section containing text */
+
+.words {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 35px;
+  justify-content: center;
+  text-align: left;
+  flex-basis: 70%;
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+}
+
+.words h2 {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.words p {
+  color: var(--Desaturated-Dark-Blue);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* styling bottom profile section */
+
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.profile span {
+  color: var(--Grayish-Blue);
+  font-weight: 500;
+}
+
+.share-btn {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--Light-Grayish-Blue);
+  justify-content: center;
+  align-items: center;
+}
+
+.share-btn:hover {
+  cursor: pointer;
+}
+
+.share-btn.active {
+  background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+i {
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+.fa-share.active {
+  color: white;
+}
+
+.share-btn-2 {
+  display: none;
+}
+
+/* styling pop up that comes up when the share icon is clicked */
+
+.pop-up {
+  display: none;
+  top: -70px;
+  right: -120px;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pop-up.active {
+  display: flex;
+}
+
+.pop-up-2 {
+  display: none;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  width: 280px;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  border-radius: 10px;
+}
+
+.socials img:hover {
+  cursor: pointer;
+}
+
+.socials p {
+  color: var(--Light-Grayish-Blue);
+}
+
+.two {
+  display: none;
+}
+
+.triangle {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid var(--Very-Dark-Grayish-Blue);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    max-width: 375px;
+    height: initial;
+  }
+
+  .pic img {
+    border-radius: 10px 10px 0 0;
+    height: initial;
+  }
+
+  .words {
+    border-radius: 0px 0px 10px 10px;
+    height: initial;
+    position: relative;
+    padding: 20px;
+  }
+
+  .words h2 {
+    font-size: 1.2rem;
+  }
+
+  .profile-section {
+    position: initial;
+  }
+
+  .share-btn {
+    display: none;
+  }
+
+  .share-btn-2 {
+    display: block;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--Light-Grayish-Blue);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .share-btn-2.active {
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    background-color: var(--Desaturated-Dark-Blue);
+  }
+
+  .fa-share-2.active {
+    color: white;
+  }
+
+  .pop-up-2.active {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  .two {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    height: 63px;
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .two div {
+    display: flex;
+    gap: 20px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    width: 280px;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    border-radius: 10px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
